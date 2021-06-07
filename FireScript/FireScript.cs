@@ -15,8 +15,7 @@ namespace FireScript
             TriggerEvent("chat:addSuggestion", "/startfire", "Starts a fire at your location", new[]
             {
                 new { name = "NumFlames", help = "The number of flames (up to 100 depending on size)" },
-                new { name="Radius", help="The radius in metres (up to 30 depending on size)" },
-                new { name="Explosion", help="True to create an explosion, false to not create an explosion." },
+                new { name="Radius", help="The radius in metres (up to 30 depending on size)" }
             });
             TriggerEvent("chat:addSuggestion", "/startsmoke", "Starts smoke without fire at your location", new[]
             {

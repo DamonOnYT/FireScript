@@ -45,15 +45,6 @@ namespace FireScript
             SmokePTFX = asset.CreateEffectAtCoord("scr_env_agency3b_smoke", Position, scale:MaxSpreadDistance*0.5f, startNow:true);
             //SmokePTFX = Function.Call<uint>(Hash.START_PARTICLE_FX_LOOPED_AT_COORD, "scr_env_agency3b_smoke", Position.X, Position.Y, Position.Z + 0.87, 0, 0, 0, 5, 0, 0, 0, 0);
             //Function.Call(Hash.SET_PARTICLE_FX_LOOPED_ALPHA, SmokePTFX, 1);
-            if (this.Explosion)
-            {
-                World.AddExplosion(Position, ExplosionType.Propane, 1, 1, aubidble: true);
-                ParticleEffectsAsset expl_asset = new ParticleEffectsAsset("scr_trevor3");
-                await expl_asset.Request(1000);
-                Vector3 pos = Position;
-                pos.Z += 1;
-                expl_asset.StartNonLoopedAtCoord("scr_trev3_trailer_expolsion", pos);
-            }
             if (API.GetInteriorAtCoords(Position.X, Position.Y, Position.Z) == 0)
             {
                 InteriorSmokePTFX = asset.CreateEffectAtCoord("scr_env_agency3b_smoke", Position, scale: 5, startNow: true);
